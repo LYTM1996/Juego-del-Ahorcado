@@ -1,16 +1,15 @@
 import random
 
-# Lista de palabras posibles
-palabras = ["python", "ecuador", "programacion", "tecnologia", "computadora"]
-
+# Lista de palabras ocultas posibles
+palabras = ["inflamable", "antiguo", "programacion", "suculenta", "inmigrante", "aleatorio", "tecnologia", "cuchillo", "gimnasio", "lisbeh"]
 # Elegir una palabra al azar
 palabra = random.choice(palabras)
 
-# Guardar las letras que el jugador adivina
-letras = []
-
 # Número de intentos permitidos
 vidas = 6
+
+# Guardar las letras que el jugador adivina
+letras = []
 
 # Mostrar mensaje de bienvenida
 print("Juego del ahorcado")
@@ -19,6 +18,11 @@ print("_ " * len(palabra))  # Mostrar espacios vacíos
 # Bucle del juego
 while vidas > 0:
     letra_ingresada = input("Escribe una letra: ").lower()
+
+    # Validar que la entrada sea una letra
+    if not letra_ingresada.isalpha():
+        print ("Ingrese solo letras")
+        continue
 
     # Verificar que solo ingrese una letra
     if len(letra_ingresada) != 1:
@@ -34,10 +38,10 @@ while vidas > 0:
 
     # Revisar si la letra está en la palabra
     if letra_ingresada in palabra:
-        print("¡Sí está!")
+        print("Adivinaste, continúa")
     else:
         vidas -= 1
-        print("No está. Te quedan", vidas, "vidas")
+        print("Fallaste. Te quedan", vidas, "vidas")
 
     # Mostrar la palabra con las letras adivinadas
     mostrada = ""
@@ -50,8 +54,8 @@ while vidas > 0:
     print(mostrada)
 
     # Verificar si ya adivinó todo
-    if "_" not in mostrada:
-        print("¡Ganaste!")
+    if "_" not in mostrada: 
+        print("Ganaste")
         break
 
 # Si pierde
