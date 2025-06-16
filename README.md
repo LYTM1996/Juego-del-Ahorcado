@@ -5,6 +5,7 @@ Juego del Ahorcado en Python
 Autor: Lisbeth Tipan
 Materia: Lógica de Programación - Primer Semestre
 Descripción: Este programa cosiste en el desarrollo del juego del "Ahorcado" desarrollado en Python. En donde el jugador debe adivinar una palabra secreta, que será elegida aleatoriamente de una lista de palabras y deberá adivinarla letra por letra, antes de quedarse sin los 6 intentos que tiene y perder.
+En este repositorio se encontrará el diagrama de flujo y el código fuente.
 ------------------------------------------------------------------------------------------------------
 Características:
 - Importación del módulo random.
