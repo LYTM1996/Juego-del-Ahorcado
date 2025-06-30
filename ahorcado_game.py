@@ -39,28 +39,28 @@ def mostrar_estadisticas_modo(modo):
             estadisticas['multijugador']['jugador2']['ganadas'] == 0 and estadisticas['multijugador']['jugador2']['perdidas'] == 0
         ):
             print("\nNo hay estadísticas recientemente.")
-            return
-
-        print("\n--- ESTADÍSTICAS FINALES ---")
-        print(f"Total de partidas jugadas: {estadisticas['total_partidas']}")
-        
-        print("\nResumen de cada partida:")
-        for i, resumen in enumerate(estadisticas["resumen_partidas"], start=1):
-            print(f"{i}. {resumen}")
-        
-        print("\nEstadísticas por modo de juego:")
-        
-        print("\n- Un solo jugador:")
-        print(f"  Ganadas: {estadisticas['un_jugador']['ganadas']}")
-        print(f"  Perdidas: {estadisticas['un_jugador']['perdidas']}")
-        
-        print("\n- Contra la computadora:")
-        print(f"  Jugador 1: Ganadas: {estadisticas['contra_computadora']['jugador']['ganadas']}, Perdidas: {estadisticas['contra_computadora']['jugador']['perdidas']}")
-        print(f"  Computadora: Ganadas: {estadisticas['contra_computadora']['computadora']['ganadas']}, Perdidas: {estadisticas['contra_computadora']['computadora']['perdidas']}")
-        
-        print("\n- Multijugador:")
-        print(f"  Jugador 1: Ganadas: {estadisticas['multijugador']['jugador1']['ganadas']}, Perdidas: {estadisticas['multijugador']['jugador1']['perdidas']}")
-        print(f"  Jugador 2: Ganadas: {estadisticas['multijugador']['jugador2']['ganadas']}, Perdidas: {estadisticas['multijugador']['jugador2']['perdidas']}")
+            #return
+        else:     
+            print("\n--- ESTADÍSTICAS FINALES ---")
+            print(f"Total de partidas jugadas: {estadisticas['total_partidas']}")
+            
+            print("\nResumen de cada partida:")
+            for i, resumen in enumerate(estadisticas["resumen_partidas"], start=1):
+                print(f"{i}. {resumen}")
+            
+            print("\nEstadísticas por modo de juego:")
+            
+            print("\n- Un solo jugador:")
+            print(f"  Ganadas: {estadisticas['un_jugador']['ganadas']}")
+            print(f"  Perdidas: {estadisticas['un_jugador']['perdidas']}")
+            
+            print("\n- Contra la computadora:")
+            print(f"  Jugador 1: Ganadas: {estadisticas['contra_computadora']['jugador']['ganadas']}, Perdidas: {estadisticas['contra_computadora']['jugador']['perdidas']}")
+            print(f"  Computadora: Ganadas: {estadisticas['contra_computadora']['computadora']['ganadas']}, Perdidas: {estadisticas['contra_computadora']['computadora']['perdidas']}")
+            
+            print("\n- Multijugador:")
+            print(f"  Jugador 1: Ganadas: {estadisticas['multijugador']['jugador1']['ganadas']}, Perdidas: {estadisticas['multijugador']['jugador1']['perdidas']}")
+            print(f"  Jugador 2: Ganadas: {estadisticas['multijugador']['jugador2']['ganadas']}, Perdidas: {estadisticas['multijugador']['jugador2']['perdidas']}")
 
 # Mostrar mensaje de bienvenida
 print("<=== JUEGO DEL AHORCADO ===>")
@@ -104,7 +104,7 @@ def ver_reglas_juego_un_solo_jugador():
     print("- Si adivina toda la palabra antes de quedarse sin vidas, gana.")
     print("- Si se le terminan las vidas sin completar la palabra, pierde.")
     print("- Las letras repetidas no restan vidas si ya las adivinó antes.\n")
-    return input("Presiona 4 para volver al REGLAS DEL JUEGO: ")
+    return input("Presiona 4 para volver a REGLAS DEL JUEGO: ")
 
 def ver_reglas_contra_la_computadora():
     print("\n --- REGLAS DEL JUEGO:  CONTRA LA COMPUTADORA ---")
